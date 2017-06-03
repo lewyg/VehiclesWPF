@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace VehiclesWPF.Common
+namespace VehiclesWPF.Model
 {
     class ObservableObject : INotifyPropertyChanged
     {

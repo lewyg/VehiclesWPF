@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehiclesWPF.View"
-        xmlns:common="clr-namespace:VehiclesWPF.Common"
+        xmlns:rule="clr-namespace:VehiclesWPF.View.Rule"
+        xmlns:converter="clr-namespace:VehiclesWPF.View.Converter"
         mc:Ignorable="d"
         Title="Vehicle" Height="205.174" Width="332.96">
 
@@ -27,7 +28,7 @@
             <TextBox.Text>
                 <Binding Path="BrandName">
                     <Binding.ValidationRules>
-                        <common:NotEmptyRule/>
+                        <rule:NotEmptyRule/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox.Text>
@@ -38,7 +39,7 @@
             <TextBox.Text>
                 <Binding Path="ModelName">
                     <Binding.ValidationRules>
-                        <common:NotEmptyRule/>
+                        <rule:NotEmptyRule/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox.Text>
@@ -49,7 +50,7 @@
             <DatePicker.SelectedDate>
                 <Binding Path="ProductionDate" NotifyOnValidationError="True">
                     <Binding.ValidationRules>
-                        <common:PastDateRule/>
+                        <rule:PastDateRule/>
                     </Binding.ValidationRules>
                 </Binding>
             </DatePicker.SelectedDate>
@@ -60,10 +61,10 @@
             <TextBox.Text>
                 <Binding Path="RegistrationNumber">
                     <Binding.Converter>
-                        <common:RegistrationNumberConverter/>
+                        <converter:RegistrationNumberConverter/>
                     </Binding.Converter>
                     <Binding.ValidationRules>
-                        <common:RegistrationNumberRule/>
+                        <rule:RegistrationNumberRule/>
                     </Binding.ValidationRules>
                 </Binding>
             </TextBox.Text>
@@ -75,7 +76,7 @@
             <Button.IsEnabled>
                 <MultiBinding Mode="TwoWay">
                     <MultiBinding.Converter>
-                        <common:InverseBooleanConverter/>
+                        <converter:InverseBooleanConverter/>
                     </MultiBinding.Converter>
                     <Binding ElementName="brandNameTextBox" Path="(Validation.HasError)"/>
                     <Binding ElementName="modelNameTextBox" Path="(Validation.HasError)"/>

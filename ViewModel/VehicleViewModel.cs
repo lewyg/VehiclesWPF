@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Input;
-using VehiclesWPF.Common;
 using VehiclesWPF.Model;
 
 namespace VehiclesWPF.ViewModel

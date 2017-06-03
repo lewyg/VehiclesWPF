@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
-using VehiclesWPF.Common;
 using VehiclesWPF.Model;
 
 namespace VehiclesWPF.ViewModel
@@ -39,7 +38,7 @@ namespace VehiclesWPF.ViewModel
                 if (addVehicleCommand == null)
                 {
                     addVehicleCommand = new RelayCommand(
-                        view => addVehicle(view)
+                        param => addVehicle(param)
                     );
                 }
                 return addVehicleCommand;
@@ -70,7 +69,7 @@ namespace VehiclesWPF.ViewModel
                 if (showVehicleCommand == null)
                 {
                     showVehicleCommand = new RelayCommand(
-                        view => showVehicle(view),
+                        param => showVehicle(param),
                         param => Vehicles.Count > 0 && SelectedVehicle != null
                     );
                 }

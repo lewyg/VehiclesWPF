@@ -55,13 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Common\InverseBooleanConverter.cs" />
-    <Compile Include="Common\NotEmptyRule.cs" />
-    <Compile Include="Common\PastDateRule.cs" />
+    <Compile Include="View\Converter\RegistrationNumberConverter.cs" />
+    <Compile Include="View\Converter\InverseBooleanConverter.cs" />
+    <Compile Include="View\Rule\RegistrationNumberRule.cs" />
+    <Compile Include="View\Rule\NotEmptyRule.cs" />
+    <Compile Include="View\Rule\PastDateRule.cs" />
     <Compile Include="Model\VehicleModel.cs" />
-    <Compile Include="Common\ObservableObject.cs" />
-    <Compile Include="Common\RegistrationNumber.cs" />
-    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Model\ObservableObject.cs" />
+    <Compile Include="Model\RegistrationNumber.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\VehicleListViewModel.cs" />
     <Compile Include="ViewModel\VehicleViewModel.cs" />
     <Compile Include="View\VehicleView.xaml.cs">

@@ -2,14 +2,14 @@
 using System.Globalization;
 using System.Windows.Controls;
 
-namespace VehiclesWPF.Common
+namespace VehiclesWPF.View.Rule
 {
-    public class PastDateRule : ValidationRule
+    public class NotEmptyRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
-            if ((DateTime)value > DateTime.Now)
-                return new ValidationResult(false, "Date can not be in the future!");
+            if (value == null || (value != null && string.IsNullOrWhiteSpace(value.ToString())))
+                return new ValidationResult(false, "Value cannot be empty!");
             else
                 return ValidationResult.ValidResult;
         }

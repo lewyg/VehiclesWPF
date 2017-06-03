@@ -1,5 +1,4 @@
 ﻿using System;
-using VehiclesWPF.Common;
 
 namespace VehiclesWPF.Model
 {

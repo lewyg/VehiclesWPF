@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Data;
 
-namespace VehiclesWPF.Common
+namespace VehiclesWPF.View.Converter
 {
     public class InverseBooleanConverter : IMultiValueConverter
     {
