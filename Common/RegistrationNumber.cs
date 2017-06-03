@@ -21,8 +21,8 @@ namespace VehiclesWPF.Common
 
         public RegistrationNumber(string registrationNumber = "AAA XX123")
         {
-            this.regionCode = registrationNumber.Substring(0, 3);
-            this.prefixCode = registrationNumber.Substring(4, 2);
+            this.regionCode = registrationNumber.Substring(0, 3).ToUpper();
+            this.prefixCode = registrationNumber.Substring(4, 2).ToUpper();
             this.numberCode = uint.Parse(registrationNumber.Substring(6, 3));
         }
 
